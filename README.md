@@ -14,3 +14,8 @@ ansible webservers -m ping -i inventory.yml
 ```
 ansible-playbook -i inventory.yml playbook-ping.yml
 ```
+
+4. Run install nginx 
+```
+ansible-playbook -i inventory.yml playbook-install-nginx.yml
+```

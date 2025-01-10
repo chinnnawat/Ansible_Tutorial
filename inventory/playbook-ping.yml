@@ -7,16 +7,3 @@
    - name: Print message
      ansible.builtin.debug:
        msg: Hello world
-
-- name: Ping Individual
-  hosts: server01
-  tasks:
-   - name: Ping 01
-     ansible.builtin.ping:
-
-- name: Print Individual
-  hosts: server02
-  tasks:
-   - name: Print 02
-     ansible.builtin.debug:
-       msg: Hello world Print
