@@ -2,10 +2,15 @@
 
 1. Verify your inventory.
 ```
-ansible-inventory -i inventory.ini --list
+ansible-inventory -i inventory.yml --list
 ```
 
 2. Ping the myhosts group in your inventory.
 ```
-ansible targetnode -m ping -i inventory.ini
+ansible webservers -m ping -i inventory.yml
+```
+
+3. Run playbook ping 
+```
+ansible-playbook -i inventory.yml playbook-ping.yml
 ```
