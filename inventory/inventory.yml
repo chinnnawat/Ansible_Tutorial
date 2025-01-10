@@ -1,0 +1,9 @@
+webservers:
+  hosts:
+    server01:
+      ansible_host: node1
+    server02:
+      ansible_host: node2
+  vars:
+    ansible_user: root
+    ansible_ssh_pass: password

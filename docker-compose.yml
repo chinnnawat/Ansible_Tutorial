@@ -1,0 +1,28 @@
+services:
+  ansible:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ansible_container
+    working_dir: /ansible
+    stdin_open: true
+    tty: true
+    environment:
+      ANSIBLE_HOST_KEY_CHECKING: "False"
+    entrypoint: ["/bin/sh"]
+    volumes:
+      - ./inventory:/ansible
+  node1:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: node1
+    stdin_open: true
+    tty: true
+  node2:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: node2
+    stdin_open: true
+    tty: true
