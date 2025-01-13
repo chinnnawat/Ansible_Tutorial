@@ -1,0 +1,2 @@
+nginx_package: nginx
+nginx_version: latest
