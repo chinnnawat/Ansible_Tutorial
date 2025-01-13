@@ -19,3 +19,8 @@ ansible-playbook -i inventory.yml playbook-ping.yml
 ```
 ansible-playbook -i inventory.yml playbook-install-nginx.yml
 ```
+
+5. Run install nginx with variable 
+```
+ansible-playbook -i inventory.yml playbook-install-nginx-with-variable.yml -e "@vars.yml"
+```
