@@ -12,6 +12,8 @@ services:
     entrypoint: ["/bin/sh"]
     volumes:
       - ./inventory:/ansible
+    networks:
+      - awx
   node1:
     build:
       context: .
@@ -20,7 +22,9 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 8080:80
+      - 9000:80
+    networks:
+      - awx
   node2:
     build:
       context: .
@@ -29,4 +33,10 @@ services:
     stdin_open: true
     tty: true
     ports:
-      - 8081:80
+      - 9001:80
+    networks:
+      - awx
+      
+networks:
+  awx:
+    external: true
