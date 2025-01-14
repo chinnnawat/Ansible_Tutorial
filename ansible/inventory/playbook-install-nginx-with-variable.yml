@@ -7,6 +7,8 @@
 
     - name: Install Nginx
       apt: name=nginx state="{{ nginx_version }}"
+      debug:
+        msg: "Nginx version is {{ nginx_version }}"
 
 - name: Start Nginx
   hosts: all
