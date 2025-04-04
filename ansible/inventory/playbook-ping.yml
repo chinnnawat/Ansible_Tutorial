@@ -7,3 +7,13 @@
    - name: Print message
      ansible.builtin.debug:
        msg: Hello world
+  
+- name: Ping Serve
+  hosts: server01
+  tasks:
+   - name: Ping my hosts
+     ansible.builtin.ping:
+
+   - name: Print message
+     ansible.builtin.debug:
+       msg: Hello server01

@@ -39,4 +39,4 @@ services:
       
 networks:
   awx:
-    external: true
+    # external: true
